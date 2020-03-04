@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<title>Challenge 1</title>
 		<link type="text/css" href="styles/my_style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="scripts/my_scripts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
@@ -12,28 +13,18 @@
         window.onload = function() {
 
 
-
-
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var chart = new Chart(ctx, {
-                // The type of chart we want to create
-                type: 'line',
-
-                // The data for our dataset
-                data: {
-                    labels: ['January', 'February', 'March', 'April', 'May'],
-                    datasets: [{
-                        label: 'My First dataset',
-                        backgroundColor: 'rgb(255, 99, 132)',
-                        borderColor: 'rgb(255, 99, 132)',
-                        data: [0, 10, 5, 2, 18]
-                    }]
-                },
-
-                // Configuration options go here
-                options: {}
-            });
-        }
+// For a pie chart
+var myPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: data,
+    options: options
+});
+// And for a doughnut chart
+var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+    options: options
+});
 
     </script>
         
