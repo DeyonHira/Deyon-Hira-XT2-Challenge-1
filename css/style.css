@@ -5,39 +5,8 @@ body {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #777;
-}
-
-
-
-.bg {
-    /* The image used */
-    background-image: url("../img/home.jpg");
-
-    /* Full height */
-    height: 86%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.home_text {
-    color: #fff;
-    font-family: 'Tomorrow', sans-serif;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-}
-
-a {
-    cursor: pointer;
-}
-
-a.active {
-    color: #005188 !important;
+    font-family: 'Oxanium', bold;
+    color: #00E6BB;
 }
 
 ul {
@@ -102,16 +71,22 @@ main h1 {
     color: #005188;
 }
 
+.menu_title {
+    color: #fff;
+}
+
 .page_title_fullscreen {
-    background: #fff;
-    text-transform: uppercase;
+    font-family: 'Oxanium', bold;
+    color: white;
+
 }
 
 .page_title {
-    margin-left: 42%;
-    font-family: 'Tomorrow', sans-serif;
+    font-size: 10px;
+    margin-left: 47%;
+    font-family: 'Oxanium', bold;
     text-transform: uppercase;
-    color: #005188;
+    color: white;
 }
 
 .flex-grid {
@@ -133,23 +108,13 @@ main h1 {
 .flex-grid h2 {
     margin: -15px -15px 15px -15px;
     padding: 12px 15px;
-    font-size: 14px;
-    font-weight: 400;
-    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+    border-bottom: 1px solid #00E6BB;
 }
 
 .flex-grid li {
-    position: relative;
     margin: 0 0 10px;
     padding: 0 0 0 25px;
-}
-
-.flex-grid li:before {
-    content: '\f00c';
-    font: normal 16px fontawesome;
-    top: 0;
-    left: 0;
-    color: #999;
 }
 
 .header_mobile {
@@ -159,9 +124,13 @@ main h1 {
     display: none;
 }
 
-#brandstof,
-#snelheid,
-#acceleratie {
+#brandstoftable,
+#snelheidtable,
+#acceleratietable,
+#g-forcetable,
+#zwaartekrachttable,
+#afstandtable,
+#atmosfeer {
     width: 100% !important;
 }
 
@@ -169,8 +138,8 @@ main h1 {
     display: none;
     background-color: #fff;
     position: fixed;
-    left: 25px;
-    right: 25px;
+    left: 0;
+    right: 0;
 }
 
 .topnav #myLinks {
@@ -178,6 +147,7 @@ main h1 {
 }
 
 .topnav a {
+    clear: left;
     background: #fff;
     color: #333;
     padding: 14px 16px;
@@ -192,7 +162,7 @@ main h1 {
     display: block;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 14px;
 }
 
 .topnav a:hover {
@@ -203,7 +173,7 @@ main h1 {
 
 /*  
 ** Media Queries
-*********************/
+***********************************************************/
 
 @media (max-width: 1000px) {
 
@@ -216,9 +186,6 @@ main h1 {
         margin-right: 0;
     }
 
-}
-
-@media (max-width: 1000px) {
     nav {
         display: none;
     }
@@ -239,4 +206,10 @@ main h1 {
 
     .bg {
         height: 100%
+    }
+
+    @media (max-width: 500px) {
+        .page_title {
+            display: none;
+        }
     }
